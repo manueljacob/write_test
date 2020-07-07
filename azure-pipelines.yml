@@ -15,5 +15,5 @@ pool:
 steps:
 - script: $(python2) --version
 - script: $(python3) --version
-- script: $(python2) -u -c "import sys; sys.stdout.buffer.write(b'x'*131072)"
-- script: $(python3) -u -c "import sys; sys.stdout.buffer.write(b'x'*131072)"
+- script: $(python2) -u -c "import sys; print(sys.stdout.buffer.write(b'x'*131072))"
+- script: $(python3) -u -c "import sys; print(sys.stdout.buffer.write(b'x'*131072))"
